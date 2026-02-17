@@ -2,11 +2,11 @@ import java.util.*;
 
 class EventManagementSystem {
 
-    // ---------- SESSION ----------
+    
     static String loggedInUser = null;
     static String role = null;
 
-    // ---------- DATABASE (SIMULATED) ----------
+    
     static Map<String, String> users = new HashMap<>();
     static Map<String, String> roles = new HashMap<>();
     static Map<Integer, Membership> memberships = new HashMap<>();
@@ -14,7 +14,7 @@ class EventManagementSystem {
     static Scanner sc = new Scanner(System.in);
     static int membershipIdCounter = 1;
 
-    // ---------- MEMBERSHIP CLASS ----------
+    
     static class Membership {
         int id;
         String name;
@@ -29,7 +29,7 @@ class EventManagementSystem {
         }
     }
 
-    // ---------- MAIN ----------
+    
     public static void main(String[] args) {
 
         // default users
@@ -49,7 +49,7 @@ class EventManagementSystem {
         }
     }
 
-    // ---------- LOGIN ----------
+    
     static void login() {
         System.out.println("\n===== LOGIN =====");
 
@@ -72,7 +72,7 @@ class EventManagementSystem {
         }
     }
 
-    // ---------- ADMIN MENU ----------
+    
     static void adminMenu() {
         while (true) {
             System.out.println("\n--- ADMIN MENU ---");
@@ -93,7 +93,7 @@ class EventManagementSystem {
         }
     }
 
-    // ---------- USER MENU ----------
+    
     static void userMenu() {
         while (true) {
             System.out.println("\n--- USER MENU ---");
@@ -112,7 +112,7 @@ class EventManagementSystem {
         }
     }
 
-    // ---------- MAINTENANCE (ADMIN ONLY) ----------
+    
     static void maintenanceMenu() {
         while (true) {
             System.out.println("\n--- MAINTENANCE ---");
@@ -131,7 +131,7 @@ class EventManagementSystem {
         }
     }
 
-    // ---------- ADD MEMBERSHIP ----------
+    
     static void addMembership() {
         System.out.println("\nAdd Membership");
 
@@ -161,7 +161,7 @@ class EventManagementSystem {
         System.out.println("Membership Added Successfully!");
     }
 
-    // ---------- UPDATE MEMBERSHIP ----------
+    
     static void updateMembership() {
         System.out.print("Enter Membership ID: ");
         int id = getIntInput();
@@ -187,7 +187,7 @@ class EventManagementSystem {
         }
     }
 
-    // ---------- REPORTS ----------
+    
     static void reports() {
         System.out.println("\n--- REPORTS ---");
 
@@ -206,20 +206,20 @@ class EventManagementSystem {
         }
     }
 
-    // ---------- TRANSACTIONS ----------
+   
     static void transactions() {
         System.out.println("\nTransaction module executed.");
         System.out.println("(Sample implementation)");
     }
 
-    // ---------- LOGOUT / SESSION ----------
+    
     static void logout() {
         loggedInUser = null;
         role = null;
         System.out.println("Logged out successfully.");
     }
 
-    // ---------- VALIDATION ----------
+   
     static int getIntInput() {
         while (true) {
             try {
